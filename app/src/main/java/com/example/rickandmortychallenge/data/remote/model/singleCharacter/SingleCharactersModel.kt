@@ -18,7 +18,7 @@ data class SingleCharactersModel(
     @SerializedName("name")
     val name: String,
     @SerializedName("origin")
-    val origin: OriginModel,
+    val origin: LocationModel,
     @SerializedName("species")
     val species: String,
     @SerializedName("status")

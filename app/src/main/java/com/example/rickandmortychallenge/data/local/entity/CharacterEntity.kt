@@ -21,6 +21,8 @@ data class CharacterEntity(
     val location: LocationEntity,
     val image: String,
 
+    val page: Int? = null,
+
     val episode: List<String>
 
 )
