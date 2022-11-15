@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/itemCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    android:transitionGroup="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="10dp"
+    android:transitionName="@string/transition_card"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/characterImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aliveImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="8dp"
+                tools:src="@drawable/ic_live" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/characterNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/genderImageView"
+                android:layout_toEndOf="@id/aliveImageView"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="Character" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/genderImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                tools:src="@drawable/ic_male" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

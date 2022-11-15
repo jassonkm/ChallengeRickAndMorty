@@ -1,7 +1,8 @@
-package com.example.rickandmortychallenge
+package com.example.rickandmortychallenge.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.rickandmortychallenge.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
