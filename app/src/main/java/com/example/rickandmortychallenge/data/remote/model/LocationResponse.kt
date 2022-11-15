@@ -2,9 +2,9 @@ package com.example.rickandmortychallenge.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class OriginDto(
+data class LocationResponse(
     @SerializedName("name")
     val name: String,
-    @SerializedName("url")
-    val url: String
+    @SerializedName("id")
+    val id: Int
 )

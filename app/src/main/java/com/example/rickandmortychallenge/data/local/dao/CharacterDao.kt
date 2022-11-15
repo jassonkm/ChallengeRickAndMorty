@@ -20,6 +20,9 @@ interface CharacterDao {
     @Query("SELECT IFNULL(MAX(page),0) FROM characterentity")
     suspend fun getLastPage(): Int
 
+    @Query("SELECT * FROM characterentity WHERE id = :characterId")
+    fun getCharacterFlow(characterId: Int): Flow<CharacterEntity>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(character: CharacterEntity)
 

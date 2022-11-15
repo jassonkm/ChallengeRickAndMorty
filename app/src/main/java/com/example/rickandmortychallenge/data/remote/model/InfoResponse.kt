@@ -2,7 +2,7 @@ package com.example.rickandmortychallenge.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class InfoDto(
+data class InfoResponse(
     @SerializedName("count")
     val count: Int,
     @SerializedName("next")

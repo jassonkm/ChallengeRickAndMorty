@@ -2,8 +2,9 @@ package com.example.rickandmortychallenge.domain.model
 
 import com.example.rickandmortychallenge.data.local.entity.CharacterEntity
 import com.example.rickandmortychallenge.data.local.entity.LocationEntity
-import com.example.rickandmortychallenge.data.remote.model.singleCharacter.LocationModel
-import com.example.rickandmortychallenge.data.remote.model.singleCharacter.SingleCharactersModel
+import com.example.rickandmortychallenge.data.remote.model.LocationResponse
+import com.example.rickandmortychallenge.data.remote.model.ResultResponse
+
 
 fun CharacterEntity.toDomain()=Character(
     id,
@@ -35,7 +36,7 @@ fun Character.toRoom() = CharacterEntity(
 )
 fun Location.toRoom() = LocationEntity(id,name)
 
-fun SingleCharactersModel.toDomain(page: Int? = null)= Character(
+fun ResultResponse.toDomain(page: Int? = null)= Character(
     id,
     name,
     status,
@@ -48,4 +49,4 @@ fun SingleCharactersModel.toDomain(page: Int? = null)= Character(
     page,
     episode
 )
-fun LocationModel.toDomain()= Location(id,name)
+fun LocationResponse.toDomain()= Location(id,name)

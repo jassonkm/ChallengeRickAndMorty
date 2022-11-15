@@ -1,8 +1,8 @@
-package com.example.rickandmortychallenge.data.remote.model.singleCharacter
+package com.example.rickandmortychallenge.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class SingleCharactersModel(
+data class ResultResponse(
     @SerializedName("created")
     val created: String,
     @SerializedName("episode")
@@ -14,11 +14,11 @@ data class SingleCharactersModel(
     @SerializedName("image")
     val image: String,
     @SerializedName("location")
-    val location: LocationModel,
+    val location: LocationResponse,
     @SerializedName("name")
     val name: String,
     @SerializedName("origin")
-    val origin: LocationModel,
+    val origin: LocationResponse,
     @SerializedName("species")
     val species: String,
     @SerializedName("status")
@@ -27,5 +27,4 @@ data class SingleCharactersModel(
     val type: String,
     @SerializedName("url")
     val url: String
-
 )
