@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@layout/fragment_home">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.rickandmortychallenge.ui.fragment.HomeFragment"
@@ -17,6 +17,7 @@
         android:id="@+id/characterFragment"
         android:name="com.example.rickandmortychallenge.ui.fragment.CharacterFragment"
         android:label="fragment_character"
+        tools:layout="@layout/fragment_character"
          >
         <argument
             android:name="character"

@@ -20,5 +20,4 @@ class CharacterViewModel @Inject constructor(
     val idCharacter: Int = savedStateHandle.get<Int>("characterId") ?:0
 
     val character: Flow<Character> = repository.getCharacter(idCharacter)
-
 }
