@@ -11,5 +11,4 @@ data class Character(
     val location: Location,
     val image: String,
     val page: Int?,
-    val episodes: List<String>
 )

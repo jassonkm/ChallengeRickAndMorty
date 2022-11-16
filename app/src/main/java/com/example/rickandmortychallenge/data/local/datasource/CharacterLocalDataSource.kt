@@ -4,6 +4,7 @@ import com.example.rickandmortychallenge.domain.model.Character
 import com.example.rickandmortychallenge.utils.Resource
 import kotlinx.coroutines.flow.Flow
 
+@Suppress("ComplexInterface", "TooManyFunctions")
 interface CharacterLocalDataSource {
     fun getCharacters(): Flow<List<Character>>
     fun getCharacterByPage(page: Int): Flow<List<Character>>

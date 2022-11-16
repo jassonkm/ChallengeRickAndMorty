@@ -23,6 +23,5 @@ data class CharacterEntity(
 
     val page: Int? = null,
 
-    val episode: List<String>
 
 )

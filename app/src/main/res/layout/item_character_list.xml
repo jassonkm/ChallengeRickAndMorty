@@ -8,6 +8,7 @@
     app:cardBackgroundColor="@color/white"
     app:cardElevation="2dp"
     android:transitionGroup="true"
+    app:cardUseCompatPadding="true"
     app:cardPreventCornerOverlap="true"
     app:cardCornerRadius="10dp"
     android:transitionName="@string/transition_card"
@@ -26,15 +27,14 @@
             app:layout_constraintRight_toRightOf="parent"/>
 
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="16dp">
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/aliveImageView"
+                android:id="@+id/status_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -42,17 +42,17 @@
                 tools:src="@drawable/ic_live" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/characterNameTextView"
+                android:id="@+id/NameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/genderImageView"
-                android:layout_toEndOf="@id/aliveImageView"
+                android:layout_toStartOf="@id/genderImg"
+                android:layout_toEndOf="@id/status_img"
                 android:gravity="center"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="Character" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/genderImageView"
+                android:id="@+id/genderImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

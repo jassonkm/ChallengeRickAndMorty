@@ -1,15 +1,16 @@
 package com.example.rickandmortychallenge.data.repository
 
-import com.example.rickandmortychallenge.data.local.datasource.CharacterLocalDataSource
-import com.example.rickandmortychallenge.data.local.datasource.CharacterRemoteDataSource
+
+import com.example.rickandmortychallenge.data.local.CharacterLocalDataSource
 import com.example.rickandmortychallenge.domain.model.Character
 import com.example.rickandmortychallenge.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
+
 class CharacterLocalRemoteImpl @Inject constructor(
-    private val remote: CharacterRemoteDataSource,
+    private val remote: CharacterRemoteDataSourceImpl,
     private val local: CharacterLocalDataSource
 ): CharacterRepository{
     override fun getCharacters(): Flow<List<Character>> =

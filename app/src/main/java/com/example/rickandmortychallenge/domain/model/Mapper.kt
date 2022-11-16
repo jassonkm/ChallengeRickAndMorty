@@ -17,7 +17,7 @@ fun CharacterEntity.toDomain()=Character(
     location.toDomain(),
     image,
     page,
-    episode
+
 )
 fun LocationEntity.toDomain()= Location(id,name)
 
@@ -32,7 +32,7 @@ fun Character.toRoom() = CharacterEntity(
     location.toRoom(),
     image,
     page,
-    episodes
+
 )
 fun Location.toRoom() = LocationEntity(id,name)
 
@@ -47,6 +47,5 @@ fun ResultResponse.toDomain(page: Int? = null)= Character(
     location.toDomain(),
     image,
     page,
-    episode
 )
 fun LocationResponse.toDomain()= Location(id,name)
