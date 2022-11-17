@@ -5,146 +5,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:colorBackground"
-    android:transitionName="@string/transition_card_view"
     android:transitionGroup="true"
+    android:transitionName="@string/transition_card_view"
     tools:context="ui.fragment.CharacterFragment">
 
 
     <ImageView
         android:id="@+id/character_img"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/character_fragment_nameTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_fragment_nameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/name"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
         android:textAppearance="?attr/textAppearanceBody2"
-        app:layout_constraintEnd_toStartOf="@id/character_name_tv"
-        app:layout_constraintTop_toBottomOf="@id/character_img"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/character_fragment_statusTitle"
+        app:layout_constraintEnd_toStartOf="@+id/character_name_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_img" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_name_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/uname"
+        android:layout_marginBottom="1dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:text="@string/uname"
+        app:layout_constraintBottom_toBottomOf="@+id/character_fragment_nameTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@id/character_fragment_nameTitle"
-        app:layout_constraintTop_toTopOf="@id/character_fragment_nameTitle"
-        app:layout_constraintBottom_toBottomOf="@id/character_fragment_nameTitle"
-        app:layout_constraintVertical_bias="0.85"/>
+        app:layout_constraintStart_toEndOf="@+id/character_fragment_nameTitle" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_fragment_statusTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
         android:text="@string/status"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
         android:textAppearance="?attr/textAppearanceBody2"
-        app:layout_constraintEnd_toStartOf="@id/character_status_tv"
-        app:layout_constraintTop_toBottomOf="@id/character_fragment_nameTitle"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/character_fragment_speciesTitle"
+        app:layout_constraintEnd_toStartOf="@+id/character_status_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_fragment_nameTitle" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_status_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/uname"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:text="@string/uname"
+        app:layout_constraintBottom_toBottomOf="@+id/character_fragment_statusTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/character_fragment_statusTitle"
-        app:layout_constraintBottom_toBottomOf="@id/character_fragment_statusTitle"
-        app:layout_constraintStart_toEndOf="@id/character_fragment_statusTitle"
-        app:layout_constraintVertical_bias="0.85"/>
+        app:layout_constraintStart_toEndOf="@+id/character_fragment_statusTitle" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_fragment_speciesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="147dp"
         android:text="@string/specie"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
         android:textAppearance="?attr/textAppearanceBody2"
-        app:layout_constraintEnd_toStartOf="@id/character_species_tv"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/character_species_tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_fragment_statusTitle"/>
+        app:layout_constraintTop_toBottomOf="@+id/character_fragment_statusTitle" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/character_species_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/uname"
         android:ellipsize="end"
         android:maxLines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/character_fragment_speciesTitle"
-        app:layout_constraintBottom_toBottomOf="@id/character_fragment_speciesTitle"
-        app:layout_constraintStart_toEndOf="@id/character_fragment_speciesTitle"
-        app:layout_constraintVertical_bias="0.85"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/character_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gender"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
-        android:textAppearance="?attr/textAppearanceBody2"
-        app:layout_constraintEnd_toStartOf="@id/character_gender_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_fragment_speciesTitle"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/character_gender_tv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/uname"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:layout_constraintTop_toTopOf="@id/character_gender"
-        app:layout_constraintBottom_toBottomOf="@id/character_gender"
-        app:layout_constraintStart_toEndOf="@id/character_gender"
+        app:layout_constraintBaseline_toBaselineOf="@+id/character_fragment_speciesTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.85"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/character_fragment_fromTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/location"
-        android:textSize="20dp"
-        android:textAppearance="?attr/textAppearanceBody2"
-        app:layout_constraintEnd_toStartOf="@id/character_location_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_gender" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/character_location_tv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/uname"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:layout_constraintTop_toTopOf="@id/character_fragment_fromTitle"
-        app:layout_constraintBottom_toBottomOf="@id/character_fragment_fromTitle"
-        app:layout_constraintStart_toEndOf="@id/character_fragment_fromTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.85"/>
+        app:layout_constraintStart_toEndOf="@+id/character_fragment_speciesTitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

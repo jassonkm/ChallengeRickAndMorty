@@ -8,10 +8,13 @@
         android:id="@+id/homeFragment"
         android:name="com.example.rickandmortychallenge.ui.fragment.HomeFragment"
         android:label="fragment_home"
+
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_characterFragment"
-            app:destination="@id/characterFragment" />
+            app:destination="@id/characterFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_in" />
     </fragment>
     <fragment
         android:id="@+id/characterFragment"

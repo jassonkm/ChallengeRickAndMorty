@@ -2,6 +2,7 @@ package com.example.rickandmortychallenge.ui.fragment
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -37,8 +38,11 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         }
         characterNameTv.text = character.name
         characterStatusTv.text = character.status
-        characterSpeciesTv.text = character.species
-        characterGenderTv.text = character.gender
+        val specie="${character.type} ${character.species}"
+        characterSpeciesTv.text = specie
+        Log.e( "setDetail: ",""+character.species )
+        Log.e( "setDetail: ",""+character.type )
+
 
     }
 

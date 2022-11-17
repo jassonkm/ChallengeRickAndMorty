@@ -17,7 +17,7 @@ class CharacterViewModel @Inject constructor(
 ) : ViewModel(){
 
 
-    val idCharacter: Int = savedStateHandle.get<Int>("characterId") ?:0
+    private val idCharacter: Int = savedStateHandle.get<Int>("character") ?:0
 
     val character: Flow<Character> = repository.getCharacter(idCharacter)
 }
