@@ -40,6 +40,11 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         characterStatusTv.text = character.status
         val specie="${character.type} ${character.species}"
         characterSpeciesTv.text = specie
+        when(character.status){
+            "Alive" -> statusDetailImg.setImageResource(R.drawable.ic_live)
+            "Dead" -> statusDetailImg.setImageResource(R.drawable.ic_dead)
+            else -> statusDetailImg.setImageResource(R.drawable.ic_unknown)
+        }
         Log.e( "setDetail: ",""+character.species )
         Log.e( "setDetail: ",""+character.type )
 
